@@ -6,6 +6,6 @@
 
 | ---------------- | ---------------- |
 
-| Code-Challenge 1  | [Array-reverse]()
+| Code-Challenge 1  | [Array-reverse](array_reveres/README.md)
 
 ​
