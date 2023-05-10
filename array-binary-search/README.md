@@ -15,7 +15,7 @@
 ###  This function performs a binary search algorithm to find the index of the element that is equal to the value of the search key. It takes in a sorted array and the search key as parameters and returns the index of the element if it is found, or -1 if it is not present in the array. The function does not utilize any of the built-in methods available in the programming language.
 
 ## Whiteboard Process
-![whitebored](CODECHALLENGE.png)
+![whitebored](ssd.png)
 
 ## Approach & Efficiency
 
