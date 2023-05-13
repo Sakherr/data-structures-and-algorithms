@@ -4,11 +4,11 @@
 
 ## Whiteboard Process
 
-![whitebord](whitebord.png)
+![whitebord](cs.png)
 ## Approach & Efficiency
 ### The Big O for my function is : O(n)
 
-The space complexity is : O(n)
+### The space complexity is : O(n)
 
 ## Solution
 
