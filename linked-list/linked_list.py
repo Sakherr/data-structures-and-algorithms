@@ -35,12 +35,48 @@ class LinkedList:
                 current = current.next
             result += "NULL"
             return result
-my_list = LinkedList()
-my_list.insert('a')
-my_list.insert('b')
-my_list.insert('c')
+    
+    def append(self, value):
+        new_node = Node(value)
+        if self.head is None:
+            self.head = new_node
+        else:
+            current = self.head
+            while current.next is not None:
+                current = current.next
+            current.next = new_node
 
-print("Linked List: {}".format(my_list.to_string()))
+    def insert_before(self, value, new_value):
+        new_node = Node(new_value)
+        if self.head is None:
+            raise Exception("Empty List")
+        elif self.head.value == value:
+            new_node.next = self.head
+            self.head = new_node
+        else:
+            current = self.head
+            while current.next is not None:
+                if current.next.value == value:
+                    new_node.next = current.next
+                    current.next = new_node
+                    return
+                current = current.next
+            raise Exception("   No Value ")
 
-print("Includes 'b': {}".format(my_list.includes('b')))
-print("Includes 'd': {}".format(my_list.includes('d')))
+
+    def insert_after(self, value, new_value):
+        new_node = Node(new_value)
+        if self.head is None:
+            raise Exception("Empty List")
+        else:
+            current = self.head
+            while current is not None:
+                if current.value == value:
+                    new_node.next = current.next
+                    current.next = new_node
+                    return
+                current = current.next
+            raise Exception("No Value")
+
+
+
