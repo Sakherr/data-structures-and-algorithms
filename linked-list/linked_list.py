@@ -5,6 +5,32 @@ class Node:
 
 
 class LinkedList:
+    
+    def kth_from_end(self, k):
+        if self.head is None:
+            raise Exception("Empty List")
+        elif k < 0:
+            raise Exception("Invalid value of k")
+
+        slow_ptr = self.head
+        fast_ptr = self.head
+
+        # Move the fast pointer k positions ahead
+        for _ in range(k):
+            if fast_ptr is None:
+                raise Exception("k is greater than the length of the linked list")
+            fast_ptr = fast_ptr.next
+
+        # Traverse the list with both pointers until fast pointer reaches the end
+        while fast_ptr.next is not None:
+            slow_ptr = slow_ptr.next
+            fast_ptr = fast_ptr.next
+
+        if k > 0 and fast_ptr is None:
+            raise Exception("k is greater than the length of the linked list")
+
+        return slow_ptr.value
+    
     def __init__(self):
         self.head = None
 
