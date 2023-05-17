@@ -106,4 +106,28 @@ def test_insert_after_append():
     assert my_list.head.next.next.next.value == 'y'
     assert my_list.head.next.next.next.next is None
 
-        
+def test_kth_from_end():
+    linked_list = LinkedList()
+    linked_list.append(1)
+    linked_list.append(2)
+    linked_list.append(3)
+    linked_list.append(4)
+    linked_list.append(5)
+
+    try:
+        linked_list.kth_from_end(6)
+    except Exception as e:
+        assert str(e) == "k is greater than the length of the linked list"
+
+    assert linked_list.kth_from_end(4) == 1
+    
+    try:
+        linked_list.kth_from_end(-2)
+    except Exception as e:
+        assert str(e) == "Invalid value of k"
+
+    single_list = LinkedList()
+    single_list.append(1)
+    assert single_list.kth_from_end(0) == 1
+
+    assert linked_list.kth_from_end(2) == 3

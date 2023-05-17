@@ -9,6 +9,8 @@
 | Code-Challenge 3  | [Array-binary-search](array-binary-search/README.md)
 | Code-Challenge 5 | [Linked List Implementation](linked-list/README.md)
 | Code-Challenge 6 | [Linked List Implementation-version 2](linked-list/READEE.md)
+| Code-Challenge 7 | [ k-th value from the end of a linked list](linked-list/READ.md)
+
 
 
 
