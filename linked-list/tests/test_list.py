@@ -107,7 +107,6 @@ def test_insert_after_append():
     assert my_list.head.next.next.next.next is None
 
 def test_kth_from_end():
-    # Create a linked list with values 1 -> 2 -> 3 -> 4 -> 5
     linked_list = LinkedList()
     linked_list.append(1)
     linked_list.append(2)
@@ -115,25 +114,20 @@ def test_kth_from_end():
     linked_list.append(4)
     linked_list.append(5)
 
-    # Scenario: k is greater than the length of the linked list
     try:
         linked_list.kth_from_end(6)
     except Exception as e:
         assert str(e) == "k is greater than the length of the linked list"
 
-    # Scenario: k and the length of the list are the same
-    assert linked_list.kth_from_end(5) == 1
-
-    # Scenario: k is not a positive integer
+    assert linked_list.kth_from_end(4) == 1
+    
     try:
         linked_list.kth_from_end(-2)
     except Exception as e:
         assert str(e) == "Invalid value of k"
 
-    # Scenario: linked list is of size 1
     single_list = LinkedList()
     single_list.append(1)
     assert single_list.kth_from_end(0) == 1
 
-    # Scenario: k is in the middle of the linked list
     assert linked_list.kth_from_end(2) == 3
