@@ -1,4 +1,8 @@
 from linked_list import LinkedList
+from linked_list import Stack
+from linked_list import Queue
+
+
 
 def test_instantiate_empty_linked_list():
     my_list = LinkedList()
@@ -131,3 +135,49 @@ def test_kth_from_end():
     assert single_list.kth_from_end(0) == 1
 
     assert linked_list.kth_from_end(2) == 3
+
+
+def test_queue():
+    queue = Queue()
+
+    queue.enqueue(10)
+    assert queue.peek() == 10
+
+    queue.enqueue(20)
+    queue.enqueue(30)
+    assert queue.peek() == 10
+
+    assert queue.dequeue() == 10
+    assert queue.peek() == 20
+
+    assert queue.peek() == 20
+
+    queue.dequeue()
+    assert queue.is_empty() is False
+    queue.dequeue()
+    assert queue.is_empty() is True
+
+    empty_queue = Queue()
+    assert empty_queue.is_empty() is True
+
+  
+def test_stack():
+    stack = Stack()
+
+    stack.push(10)
+    assert stack.peek() == 10
+
+    stack.push(20)
+    stack.push(30)
+    assert stack.peek() == 30
+
+    assert stack.pop() == 30
+    assert stack.peek() == 20
+
+    stack.pop()
+    assert stack.is_empty() is True
+
+
+    empty_stack = Stack()
+    assert empty_stack.is_empty() is True
+
