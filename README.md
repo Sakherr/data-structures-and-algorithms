@@ -13,6 +13,8 @@
 | Code-Challenge 6 | [Linked List Implementation-version 2](linked-list/READEE.md)
 | Code-Challenge 7 | [ k-th value from the end of a linked list](linked-list/READ.md)
 | Code-Challenge 8 | [ Stacks and Queues](linked-list/READMME.md)
+| Code-Challenge 6 | [Linked List zip](linked-list-zip/README.md)
+
 
 
 
