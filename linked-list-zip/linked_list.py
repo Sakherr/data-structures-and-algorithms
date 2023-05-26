@@ -1,10 +1,23 @@
 class Node:
     def __init__(self, value):
+        """
+        Initialize a new Node with the given value.
+
+        Args:
+            value: The value to store in the Node.
+        """
         self.value = value
         self.next = None
 
+
 class LinkedList:
     def __init__(self, values=None):
+        """
+        Initialize a new LinkedList. Optionally, populate it with the given values.
+
+        Args:
+            values (list): Optional. List of values to populate the LinkedList with.
+        """
         self.head = None
 
         if values is not None:
@@ -12,6 +25,12 @@ class LinkedList:
                 self.add_node(value)
 
     def add_node(self, value):
+        """
+        Add a new Node with the given value to the end of the LinkedList.
+
+        Args:
+            value: The value to add to the LinkedList.
+        """
         new_node = Node(value)
         if self.head is None:
             self.head = new_node
@@ -22,6 +41,9 @@ class LinkedList:
             current_node.next = new_node
 
     def __iter__(self):
+        """
+        Iterate over the values in the LinkedList.
+        """
         current_node = self.head
         while current_node is not None:
             yield current_node.value
@@ -29,7 +51,8 @@ class LinkedList:
 
 
 def zip_lists(list1, list2):
-    """Zips two linked lists together into one so that the nodes alternate between the two lists.
+    """
+    Zips two linked lists together into one so that the nodes alternate between the two lists.
 
     Args:
         list1: The first linked list.
@@ -77,4 +100,4 @@ list2.add_node(6)
 zipped_list = zip_lists(list1, list2)
 
 for node in zipped_list:
-  print(node)
+    print(node)
