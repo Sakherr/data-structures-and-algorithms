@@ -100,4 +100,8 @@ list2.add_node(6)
 zipped_list = zip_lists(list1, list2)
 
 for node in zipped_list:
-    print(node)
+  print(node)
+
+
+
+
