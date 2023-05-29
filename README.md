@@ -14,3 +14,4 @@
 | Code-Challenge 7 | [ k-th value from the end of a linked list](linked-list/READ.md)
 | Code-Challenge 8 | [ Stacks and Queues](Stack-Queue/READMME.md)
 | Code-Challenge 9 | [Linked List zip](linked-list-zip/README.md)
+| Code-Challenge 10 | [ Queue using two Stacks](Queue_two_stack/README.md)
