@@ -20,6 +20,8 @@
 | Code-Challenge 13 | [Trees](trees/README.md)
 | Code-Challenge 14 | [Trees-Max](tree-max/README.md)
 | Code-Challenge 15 | [ Insertion Sort](Insertion-Sort/README.md)
+| Code-Challenge 16 | [ Merge  Sort](merge-Sort/README.md)
+
 
 
 
