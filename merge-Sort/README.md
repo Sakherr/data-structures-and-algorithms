@@ -1,0 +1,1 @@
+  ![' visual step '](merge.jpg)
