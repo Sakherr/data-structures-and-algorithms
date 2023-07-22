@@ -22,6 +22,7 @@
 | Code-Challenge 15 | [ Insertion Sort](Insertion-Sort/README.md)
 | Code-Challenge 16 | [ Merge  Sort](merge-Sort/README.md)
 | Code-Challenge 17 | [Sort_comparisons](Sort_comparisons/README.md)
+| Code-Challenge 18 | [hashtable](hash_table/README.md)
 
 
 
