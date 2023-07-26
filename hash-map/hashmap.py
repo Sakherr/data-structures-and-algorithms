@@ -1,26 +1,69 @@
-import string
+class Node:
+    def __init__(self, value):
+        self.value = value
+        self.left = None
+        self.right = None
 
-def repeated_word(input_string):
-    # Remove punctuation and convert the input string to lowercase
-    translator = str.maketrans('', '', string.punctuation)
-    cleaned_string = input_string.translate(translator).lower()
-    # Split the cleaned string into words
-    words = cleaned_string.split()
-    print (words)
+class BinaryTree:
+    def __init__(self, root=None):
+        self.root = root
 
-    # Create a set to store encountered words
-    encountered_words = set()
+def inorder(tree):
+    values = []
+    if tree.root:
+        _inorder(tree.root, values)
+    return values
 
-    # Iterate through the words and check if they are in the encountered_words set
-    for word in words:
-        if word in encountered_words:
-            return word
+def _inorder(node, values):
+    if node:
+        _inorder(node.left, values)
+        values.append(node.value)
+        _inorder(node.right, values)
+
+def intersection(list1, list2):
+    hashmap = {}
+    result = []
+    for value in list1:
+        if value not in hashmap:
+            hashmap[value] = 1
         else:
-            encountered_words.add(word)
+            hashmap[value] += 1
 
-    # If no repeated word is found, return an empty string
-    return ""
+    for value in list2:
+        if value in hashmap and hashmap[value] > 0:
+            result.append(value)
+            hashmap[value] -= 1
+    return set(result)
 
-# Test cases
+def tree_intersection(tree1, tree2):
+    list1 = inorder(tree1)
+    list2 = inorder(tree2)
+    return intersection(list1, list2)
 
-print(repeated_word("saKHer, :   ;ahmed ahmed;; shteyat"))
+
+tree1 = BinaryTree(Node(150))
+tree1.root.left = Node(100)
+tree1.root.right = Node(250)
+tree1.root.left.left = Node(75)
+tree1.root.left.right = Node(160)
+tree1.root.left.right.left = Node(125)
+tree1.root.left.right.right = Node(175)
+tree1.root.right.left = Node(200)
+tree1.root.right.right = Node(350)
+tree1.root.right.right.left = Node(300)
+tree1.root.right.right.right = Node(500)
+
+tree2= BinaryTree(Node(42))
+tree2.root.left = Node(100)
+tree2.root.right = Node(600)
+tree2.root.left.left = Node(15)
+tree2.root.left.right = Node(160)
+tree2.root.left.right.left = Node(125)
+tree2.root.left.right.right = Node(175)
+
+tree2.root.right.left = Node(200)
+tree2.root.right.right = Node(350)
+tree2.root.right.right.left = Node(4)
+tree2.root.right.right.right = Node(500)
+
+print(tree_intersection(tree1, tree2))
